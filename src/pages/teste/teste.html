@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Feed Reader</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let feed of feeds">
+      <ion-thumbnail item-left>
+        <img src="{{ feed.data.thumbnail }}">
+      </ion-thumbnail>
+
+      <h2>{{ feed.data.title }}</h2>
+      <p>{{ feed.data.domain }}</p>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
